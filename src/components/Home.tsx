@@ -1,16 +1,21 @@
 import styled from "@emotion/styled";
 import ProfileList from "./ProfileList/ProfileList";
+import NewsLetter from "./NewsLetter/NewsLetter";
 
 const Home = () => {
   return (
     <HomeWrapper>
-      <HeadTitle>
-        Snap photos and share like
-        <br />
-        never before
-      </HeadTitle>
+      <HeadContainer>
+        <HeadTitle>
+          Snap photos and share like
+          <br />
+          never before
+        </HeadTitle>
 
-      <ProfileList />
+        <ProfileList />
+      </HeadContainer>
+
+      <NewsLetter />
     </HomeWrapper>
   );
 };
@@ -18,8 +23,12 @@ const Home = () => {
 export default Home;
 
 const HomeWrapper = styled.div`
-  padding: 120px 80px 0;
+  padding: 120px 0 0;
   background-color: #fff;
+`;
+
+const HeadContainer = styled.div`
+  padding: 0 80px;
 `;
 
 const HeadTitle = styled.h1`
